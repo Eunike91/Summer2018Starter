@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1242305,      21558]
-NotebookOptionsPosition[   1217938,      21114]
-NotebookOutlinePosition[   1231343,      21406]
-CellTagsIndexPosition[   1231300,      21403]
+NotebookDataLength[   1249388,      21722]
+NotebookOptionsPosition[   1223997,      21258]
+NotebookOutlinePosition[   1237783,      21561]
+CellTagsIndexPosition[   1237708,      21556]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -57,10 +57,10 @@ Cell["Sabrina Kuhrn, Jun. 28,  2018", "AuthorInfo",
 Cell["", "Text",ExpressionUUID->"85271f44-5b04-421c-bf31-0395fab10c35"],
 
 Cell["\<\
-Sport is an important component in my life. Putting tracked activities into \
-graphs and statistics sounds fun and interesting. Thus, \
-let\[CloseCurlyQuote]s start with some basic statistical analysis and show \
-some graphics afterwards. \
+Sport plays an important part of my life. As the Wolfram Language offers \
+powerful tools for visualizing and statistical analyzing data, let\
+\[CloseCurlyQuote]s start with doing some basic statistics with recorded \
+activity data and show some graphics afterwards. \
 \>", "Text",
  CellChangeTimes->{{3.700774312865305*^9, 3.700774350341485*^9}, 
    3.716902427754265*^9, 3.7354828504054613`*^9, {3.735483653472313*^9, 
@@ -72,12 +72,14 @@ some graphics afterwards. \
    3.739104679064616*^9}, {3.7391248382873077`*^9, 3.739124839193775*^9}, {
    3.7391789007074842`*^9, 3.739178900858132*^9}, 3.739189985155246*^9, {
    3.739190021386023*^9, 3.739190080752473*^9}, {3.739226606336814*^9, 
-   3.739226607750408*^9}},ExpressionUUID->"99ddfba3-f2e4-48aa-a886-\
+   3.739226607750408*^9}, {3.739283070561819*^9, 3.739283090537677*^9}, {
+   3.739283243982231*^9, 
+   3.73928340673883*^9}},ExpressionUUID->"99ddfba3-f2e4-48aa-a886-\
 7472bbc581ac"],
 
 Cell[CellGroupData[{
 
-Cell["Data importing and first insights", "Section",
+Cell["Data Import and First Insights", "Section",
  CellChangeTimes->{
   3.716825484342502*^9, {3.7354837120026693`*^9, 3.735483720370885*^9}, {
    3.7354849131442633`*^9, 3.735484915566925*^9}, {3.735484977664678*^9, 
@@ -85,14 +87,14 @@ Cell["Data importing and first insights", "Section",
    3.735587708401764*^9, 3.735587719552019*^9}, {3.736094321292815*^9, 
    3.736094380388455*^9}, {3.739124846437592*^9, 3.739124848951988*^9}, {
    3.7391900071488028`*^9, 3.739190017116187*^9}, {3.739190193086301*^9, 
-   3.739190207116605*^9}},ExpressionUUID->"35feb7e4-4e93-4e64-abc0-\
+   3.739190207116605*^9}, {3.739286704394805*^9, 
+   3.739286713043041*^9}},ExpressionUUID->"35feb7e4-4e93-4e64-abc0-\
 7b0b86e8128f"],
 
 Cell[TextData[StyleBox["Regarding  statistical analysis,  a spread sheet of \
 data with basic information about activities was downloaded. Regarding \
-visualization,  the same activities containing more detail  as \
-longitude/latitude information etc. were exported individually .", "Text"]], \
-"Text",
+visualization,  the same activities containing greater detail as for example \
+longitude/latitude information were imported individually.", "Text"]], "Text",
  CellChangeTimes->{{3.7354837283947477`*^9, 3.735483762505471*^9}, 
    3.7354839554661007`*^9, {3.735486453399912*^9, 3.7354864557440453`*^9}, {
    3.735486518874126*^9, 3.735486528166209*^9}, {3.735587823291749*^9, 
@@ -104,8 +106,9 @@ longitude/latitude information etc. were exported individually .", "Text"]], \
    3.73919303654727*^9}, {3.739217752197484*^9, 3.7392177527782917`*^9}, {
    3.7392184955739613`*^9, 3.739218512755101*^9}, {3.739218607710536*^9, 
    3.739218682020859*^9}, {3.7392271345900173`*^9, 3.739227202389592*^9}, {
-   3.739230743484041*^9, 
-   3.739230744436401*^9}},ExpressionUUID->"6047e34c-4783-4ed0-b0de-\
+   3.739230743484041*^9, 3.739230744436401*^9}, {3.7392836869720488`*^9, 
+   3.7392837221109447`*^9}, 
+   3.739284409692354*^9},ExpressionUUID->"6047e34c-4783-4ed0-b0de-\
 5328517365be"],
 
 Cell[BoxData[
@@ -1850,13 +1853,15 @@ Cell[BoxData[
 }, {2}]],
 
 Cell["\<\
-When inspecting the loaded dataset, it looks as both activity types, cycling \
-and running, are distributed equally. Observing  the different activity \
-attributes someone can see that the heart rate is higher for running whereas \
-the covered distance is much less compared to cycling. Calories seems to be \
-correlated to Distance and somehow to Time when focusing on one activity \
-type. As the Wolfram Language offers powerful tools to do statistical \
-analysis, let\[CloseCurlyQuote]s proof the assumptions made.  \
+When inspecting the imported spreadsheet, it looks as both activity types, \
+cycling and running, are distributed equally. Observing  the different \
+activity attributes, someone can see that the heart rate is higher for \
+running whereas the covered distance is much less compared to cycling. \
+\[OpenCurlyDoubleQuote]Calories\[CloseCurlyDoubleQuote] seems to be \
+correlated to \[OpenCurlyDoubleQuote]Distance\[CloseCurlyDoubleQuote] and \
+somehow to \[OpenCurlyDoubleQuote]Time\[CloseCurlyDoubleQuote] when focusing \
+on one activity type. As the Wolfram Language offers the needed tools to do \
+statistical analysis, let\[CloseCurlyQuote]s proof the assumptions made.  \
 \>", "Text",
  CellChangeTimes->{{3.7392189872681427`*^9, 3.7392190310137672`*^9}, {
    3.739219106401342*^9, 3.739219108822112*^9}, {3.7392193818254137`*^9, 
@@ -1866,8 +1871,8 @@ analysis, let\[CloseCurlyQuote]s proof the assumptions made.  \
    3.7392199484142017`*^9, 3.73921995797618*^9}, {3.739220014824196*^9, 
    3.739220154161436*^9}, {3.739220207846183*^9, 3.7392202263110113`*^9}, 
    3.739221164554367*^9, {3.7392273724924927`*^9, 3.739227376990366*^9}, {
-   3.739227407592659*^9, 
-   3.73922743591652*^9}},ExpressionUUID->"75bd5e05-b4e9-4864-acf5-\
+   3.739227407592659*^9, 3.73922743591652*^9}, {3.739284448611611*^9, 
+   3.739284522652116*^9}},ExpressionUUID->"75bd5e05-b4e9-4864-acf5-\
 02b94c00ecbd"]
 }, Open  ]],
 
@@ -1882,12 +1887,16 @@ Cell["Statistical Analysis", "Section",
    3.739220247067973*^9}},ExpressionUUID->"69c2789e-757d-42de-8e7a-\
 aa67a7c35b9d"],
 
-Cell["\<\
-A BarChart is used to underline the first assumption and show that both \
-activities are practiced equally.\
-\>", "Text",
- CellChangeTimes->{{3.7392214137703648`*^9, 
-  3.73922151088134*^9}},ExpressionUUID->"904c5895-9477-495f-b2fe-\
+Cell[TextData[{
+ "A ",
+ StyleBox["BarChart",
+  FontWeight->"Bold"],
+ " is used to underline the first assumption and show that both activities \
+are practiced somehow equally."
+}], "Text",
+ CellChangeTimes->{{3.7392214137703648`*^9, 3.73922151088134*^9}, {
+  3.739284617471467*^9, 
+  3.739284618903216*^9}},ExpressionUUID->"904c5895-9477-495f-b2fe-\
 b04dd44ce7bb"],
 
 Cell[BoxData[{
@@ -1976,34 +1985,33 @@ Cell[BoxData[
         StyleBox["10", {}, StripOnInput -> False]],
        Annotation[#, 
         Style[10, {}], "Tooltip"]& ]}}, {}, {}}, {}, {}, {}, {}, 
-   StyleBox[
-    StyleBox[{
-      {Thickness[Tiny], 
-       LineBox[{{-0.8428550619082302, 0.}, {3.870688128186453, 0.}}], 
-       StyleBox[{}, "GraphicsLabel",
-        StripOnInput->False]}, 
-      StyleBox[{
+   StyleBox[{
+     {Thickness[Tiny], 
+      LineBox[{{-0.8428550619082302, 0.}, {3.870688128186453, 0.}}], 
+      StyleBox[{}, "GraphicsLabel",
+       StripOnInput->False]}, 
+     StyleBox[{
+       {Thickness[Tiny], 
+        LineBox[{{0.5487982520029133, 0.}, 
+          Offset[{-1.102182119232618*^-15, -6.}, {0.5487982520029133, 0.}]}], 
+        LineBox[{{2.4512017479970867`, 0.}, 
+          Offset[{-1.102182119232618*^-15, -6.}, {2.4512017479970867`, 
+           0.}]}], {{}, {}, {
+          LineBox[{{1.4512017479970867`, 0.}, 
+            Offset[{-7.347880794884119*^-16, -4.}, {1.4512017479970867`, 
+             0.}]}], LineBox[{{1.5487982520029133`, 0.}, 
+            Offset[{-7.347880794884119*^-16, -4.}, {1.5487982520029133`, 
+             0.}]}]}, {}}}, 
+       StyleBox[
         {Thickness[Tiny], 
-         LineBox[{{0.5487982520029133, 0.}, 
-           Offset[{-1.102182119232618*^-15, -6.}, {0.5487982520029133, 0.}]}],
-          LineBox[{{2.4512017479970867`, 0.}, 
-           Offset[{-1.102182119232618*^-15, -6.}, {2.4512017479970867`, 
-            0.}]}], {{}, {}, {
-           LineBox[{{1.4512017479970867`, 0.}, 
-             Offset[{-7.347880794884119*^-16, -4.}, {1.4512017479970867`, 
-              0.}]}], LineBox[{{1.5487982520029133`, 0.}, 
-             Offset[{-7.347880794884119*^-16, -4.}, {1.5487982520029133`, 
-              0.}]}]}, {}}}, 
-        StyleBox[
-         {Thickness[Tiny], 
-          InsetBox["\<\"cycling\"\>", Offset[{0, -2}, {1., 0.}], {0, 1}, 
-           Automatic, {1, 0}], 
-          InsetBox["\<\"running\"\>", Offset[{0, -2}, {2., 0.}], {0, 1}, 
-           Automatic, {1, 0}]}, "GraphicsLabel",
-         StripOnInput->False]}, "GraphicsTicks",
-       StripOnInput->False]},
-     Antialiasing->False], "GraphicsAxes",
-    StripOnInput->False]},
+         InsetBox["\<\"cycling\"\>", Offset[{0, -2}, {1., 0.}], {0, 1}, 
+          Automatic, {1, 0}], 
+         InsetBox["\<\"running\"\>", Offset[{0, -2}, {2., 0.}], {0, 1}, 
+          Automatic, {1, 0}]}, "GraphicsLabel",
+        StripOnInput->False]}, "GraphicsTicks",
+      StripOnInput->False]}, "GraphicsAxes",
+    StripOnInput->False,
+    Antialiasing->False]},
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->{False, True},
   AxesLabel->{None, None},
@@ -2036,17 +2044,28 @@ Cell[BoxData[
 
 Cell["\<\
 To proof if the other assumptions are correct too, we do some further \
-statistical analysis. Looking at the overall average heart rate and comparing \
-it to the average heart rate of both activity types,  proofs again the \
-assumptions made. Considering my data are correct and do not include outlier \
-someone can see that the heart rate is slightly higher on average.\
+statistical analysis.\
 \>", "Text",
  CellChangeTimes->{{3.739221037670699*^9, 3.739221042595183*^9}, 
    3.739221120651874*^9, {3.739221840414563*^9, 3.739221936584196*^9}, {
    3.739221970090087*^9, 3.7392220546058073`*^9}, {3.739267142335734*^9, 
-   3.739267177289776*^9}, {3.739267457629863*^9, 
-   3.7392674586879272`*^9}},ExpressionUUID->"26b65c08-ec0b-409a-8812-\
+   3.739267177289776*^9}, {3.739267457629863*^9, 3.7392674586879272`*^9}, {
+   3.739284560224785*^9, 3.7392845938985653`*^9}, {3.739284627836171*^9, 
+   3.739284627837804*^9}},ExpressionUUID->"26b65c08-ec0b-409a-8812-\
 be8cd0242004"],
+
+Cell["\<\
+Looking at the overall average heart rate and comparing it to the average \
+heart rate of both activity types,  proofs again the assumptions made. \
+\>", "Text",
+ CellChangeTimes->{{3.739221037670699*^9, 3.739221042595183*^9}, 
+   3.739221120651874*^9, {3.739221840414563*^9, 3.739221936584196*^9}, {
+   3.739221970090087*^9, 3.7392220546058073`*^9}, {3.739267142335734*^9, 
+   3.739267177289776*^9}, {3.739267457629863*^9, 3.7392674586879272`*^9}, {
+   3.739284560224785*^9, 3.7392845938985653`*^9}, {3.7392846295405207`*^9, 
+   3.7392846968418818`*^9}, {3.739284809012492*^9, 
+   3.7392848152220507`*^9}},ExpressionUUID->"076561b8-9d1e-437b-b0c1-\
+2b1b051c3b10"],
 
 Cell["Overall heart rate:", "CodeText",
  CellChangeTimes->{{3.739222099160219*^9, 
@@ -2319,10 +2338,18 @@ Cell[BoxData[
 }, Open  ]],
 
 Cell["\<\
-Tracking your heart rate  tells you precisely how hard\[LongDash]or easy\
-\[LongDash]your heart is working. One would say that for an athletic person \
-the average heart rate is quite high here and would suggest that the training \
-is too hard and intense.  \
+Considering the data are correct and do not include outlier, someone can say \
+that the heart rate is slightly higher on average for running. \
+\>", "CodeText",
+ CellChangeTimes->{{3.739284795351766*^9, 
+  3.739284800683424*^9}},ExpressionUUID->"39228812-148c-42a1-be69-\
+4d44a0f6ba50"],
+
+Cell["\<\
+Tracking your heart rate  tells you precisely how hard or easy your heart is \
+working. One would say that for an athletic person the average heart rate is \
+quite high here and would suggest that the training is too intense.  Thus, \
+let\[CloseCurlyQuote]s do some more analysis of heart rate.\
 \>", "Text",
  CellChangeTimes->{{3.7392221250873003`*^9, 3.739222127069468*^9}, {
   3.739222386589037*^9, 3.739222447702384*^9}, {3.7392230235530977`*^9, 
@@ -2334,21 +2361,22 @@ is too hard and intense.  \
   3.739267409980562*^9, 3.739267497945944*^9}, {3.73926753364389*^9, 
   3.739267544797719*^9}, {3.739267607569441*^9, 3.739267634089451*^9}, {
   3.739267692663575*^9, 3.739267706315255*^9}, {3.73926809239357*^9, 
-  3.739268092393868*^9}},ExpressionUUID->"00d9d8c2-22e7-4e59-9f41-\
+  3.739268092393868*^9}, {3.739284832268818*^9, 
+  3.739284917856387*^9}},ExpressionUUID->"00d9d8c2-22e7-4e59-9f41-\
 d966131b7b87"],
 
 Cell["\<\
-Regarding experts' opinion someone should always workout in specific heart \
+Regarding experts' opinion,  someone should always workout in specific heart \
 zones, which are calculated based on your maximum heart rate (MHR).  The \
 equation which is the most common one is  \
 \>", "Text",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGAQBmIQrXV6ES/DndeOopaPwHTKzSA9EP2u8pspiP616WMt
+1:eJxTTMoPSmViYGAQAWIQrXV6ES/DndeOopaPwHTKzSA9EP2u8pspiP616WMt
 iDY5BaHfFv+4Kwqkp+RMvweiJ50reASirZa4PQfRc5TMP4JojkLdzyD6Q3Pk
 HxCtuXHeXxD9NdxYQAxIs6w/Dab5wr0kQTTj+S9g+vLGIAUQvWZ3hiKIPpJg
 rwWidVztTEH0/llbLEH0qzZJaxB9x+KTE4g+ccfJDUQz2Uz1BdGTxLz8QbTa
 znk7QfSiao69YD5f92EQXSX78AiIjj2YcxlER6zefhNEv9nWeB9ERx7Y/x5E
-1/z7/BlEL5v27RuIBgDUHaGR
+1/z7/BlEL5v27RuInrH29Ho5IP3gxSswDQBIb6v+
   "],ExpressionUUID->"2cd52c10-34d7-4321-afa2-2dbc7c53bc50"],
 
 Cell[TextData[StyleBox["                      220 \[Dash] age = MHR.", \
@@ -2364,18 +2392,19 @@ znk7QfSiao69YD5f92EQXSX78AiIjj2YcxlER6zefhNEv9nWeB9ERx7Y/x5E
 
 Cell["\<\
 This would mean that my MHR equals 193. As most of the training should fall \
-in Zone 1 and 2 meaning 60 to 80% of the MHR, the heart  in our case should \
-be between 115 and 155 most of the time. Regarding running activities that \
-would mean that the training is most of the time in the upper region of Zone \
-2.  Thus, let\[CloseCurlyQuote]s look at the maximum heart rate of the \
-tracked activities and see if the MHR is maybe higher than the above \
-calculated one.  \
+in Zone 1 and 2 meaning 60 to 80% of the MHR, the heart rate in our case \
+should be between 115 and 155 most of the time. Regarding running activities \
+that would mean that the training is most of the time in the upper region of \
+Zone 2.  Thus, let\[CloseCurlyQuote]s look at the maximum heart rate of the \
+tracked activities and see if the MHR is higher than the above calculated \
+one.  \
 \>", "Text",
  CellChangeTimes->{{3.739269091801124*^9, 3.739269315396377*^9}, {
   3.739269958570105*^9, 3.739270027504264*^9}, {3.7392700604779377`*^9, 
   3.7392700608484163`*^9}, {3.739270124500814*^9, 3.739270247007395*^9}, {
   3.739270299826652*^9, 3.7392703674861813`*^9}, {3.739270402589643*^9, 
-  3.739270485144268*^9}},ExpressionUUID->"41c3d5f7-b341-4eea-bd5c-\
+  3.739270485144268*^9}, {3.7392849485432453`*^9, 
+  3.739284978330607*^9}},ExpressionUUID->"41c3d5f7-b341-4eea-bd5c-\
 14076d49e29f"],
 
 Cell[TextData[StyleBox["Looking at the table above and calculating the \
@@ -2434,15 +2463,8 @@ Cell[BoxData["172.8421052631579`"], "Output",
 }, Open  ]],
 
 Cell["\<\
-Which is pretty high too if someone imagine that the data do not include any \
-competition activities.  Now most experts agree that the formula above may be \
-inaccurate for most people. It  is better to monitor your heart rate based on \
-something known as heart rate reserve (HRR), which is more accurate and can \
-be calculated by taking the MHR of a 5-K race (there you will likely be able \
-to sustain about 97% of your max heart rate ), getting your resting heart \
-rate (RHR) too, which can be retrieved by monitoring your heart rate as soon \
-as you wake up by counting your pulse for a full 60 seconds and repeat this \
-for a few days.  In the end, the HRR is the MHR minus the RHR. \
+This is pretty high too, if someone imagine that the data do not include any \
+competition activities.  \
 \>", "Text",
  CellChangeTimes->{{3.739269810214426*^9, 3.739269834607585*^9}, {
   3.739269868943955*^9, 3.73926990925069*^9}, {3.7392714517203503`*^9, 
@@ -2452,12 +2474,54 @@ for a few days.  In the end, the HRR is the MHR minus the RHR. \
   3.739272351093725*^9, 3.7392724689649973`*^9}, {3.7392730258465967`*^9, 
   3.7392730258825207`*^9}, {3.7392735744545717`*^9, 3.7392735744852257`*^9}, {
   3.739275005790885*^9, 3.739275024333261*^9}, {3.739275123772271*^9, 
-  3.7392751383253603`*^9}},ExpressionUUID->"d5f088f8-68d7-4f13-b8a3-\
+  3.7392751383253603`*^9}, {3.739282734295951*^9, 3.7392827375399723`*^9}, {
+  3.739285000868137*^9, 
+  3.739285024365281*^9}},ExpressionUUID->"d5f088f8-68d7-4f13-b8a3-\
 c04a8476f067"],
+
+Cell[TextData[{
+ "Nowadays, most experts agree that the formula above may be inaccurate for \
+most people and that it is better to monitor the heart rate based on \
+something known as heart rate reserve (HRR), which is more accurate and can \
+be calculated by taking the MHR of a 5-K race (there someone will likely be \
+able to sustain about 97% of their max heart rate ), getting your resting \
+heart rate (RHR), which can be retrieved by monitoring your heart rate as \
+soon as you wake up by counting your pulse for a full 60 seconds and repeat \
+this for a few days and in the end subtracting the latter from the MHR ",
+ ButtonBox[Cell[TextData[StyleBox[ButtonBox["1"],
+  FontVariations->{"CompatibilityType"->"Superscript"}]], "Citation",
+  Editable->False,
+  TaggingRules->{NoteData -> RowBox[{
+       RowBox[{"https", ":"}], "//", 
+       RowBox[{
+         RowBox[{
+           RowBox[{
+             RowBox[{
+               RowBox[{"www", ".", "runnersworld", ".", "com"}], "/", 
+               "beginner"}], "/", "a20812270"}], "/", "should"}], "-", "i", 
+         "-", "do", "-", "heart", "-", "rate", "-", 
+         RowBox[{"training", "/"}]}]}]},ExpressionUUID->
+  "2ee854f3-a1e6-4375-8451-40916a454d39"],
+  BaseStyle->"Hyperlink",
+  ButtonData->"00004B11"],
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.739269810214426*^9, 3.739269834607585*^9}, {
+  3.739269868943955*^9, 3.73926990925069*^9}, {3.7392714517203503`*^9, 
+  3.7392714610586557`*^9}, {3.739271777229836*^9, 3.739271811380044*^9}, {
+  3.739271899485811*^9, 3.739271923387807*^9}, {3.7392720006542807`*^9, 
+  3.739272095412575*^9}, {3.7392721370587378`*^9, 3.73927224281596*^9}, {
+  3.739272351093725*^9, 3.7392724689649973`*^9}, {3.7392730258465967`*^9, 
+  3.7392730258825207`*^9}, {3.7392735744545717`*^9, 3.7392735744852257`*^9}, {
+  3.739275005790885*^9, 3.739275024333261*^9}, {3.739275123772271*^9, 
+  3.7392751383253603`*^9}, {3.739282734295951*^9, 3.7392827375399723`*^9}, {
+  3.739285000868137*^9, 3.739285029569841*^9}, {3.739285075371375*^9, 
+  3.739285209863297*^9}},ExpressionUUID->"974f8ed7-1bf4-4da9-b217-\
+49bb07406af8"],
 
 Cell["\<\
 Regarding this purpose we will import some information about a 5-K run I did \
-last year extract the MHR from this specific run:\
+last year calculate the MHR from this specific run:\
 \>", "CodeText",
  CellChangeTimes->{{3.739269810214426*^9, 3.739269834607585*^9}, {
   3.739269868943955*^9, 3.73926990925069*^9}, {3.7392714517203503`*^9, 
@@ -2465,8 +2529,9 @@ last year extract the MHR from this specific run:\
   3.739271899485811*^9, 3.739271923387807*^9}, {3.7392720006542807`*^9, 
   3.739272095412575*^9}, {3.7392721370587378`*^9, 3.73927224281596*^9}, {
   3.739272351093725*^9, 3.7392724689649973`*^9}, {3.7392730258465967`*^9, 
-  3.7392730258825207`*^9}, {3.7392735837550592`*^9, 
-  3.739273584409663*^9}},ExpressionUUID->"efb3e5b6-95ca-42f2-bd3d-\
+  3.7392730258825207`*^9}, {3.7392735837550592`*^9, 3.739273584409663*^9}, {
+  3.739285238230179*^9, 
+  3.739285239596429*^9}},ExpressionUUID->"efb3e5b6-95ca-42f2-bd3d-\
 e0d1f94fb996"],
 
 Cell[CellGroupData[{
@@ -2773,13 +2838,16 @@ Cell[BoxData[
 }, {2}]],
 
 Cell["\<\
-The MHR  regarding the 5-K is 208 and as I know my RHR, which is about 45, we \
-can now easily calculate the RHR:\
+The \[OpenCurlyDoubleQuote]achieved\[CloseCurlyDoubleQuote] MHR  regarding \
+the 5-K is 208 and as I know my RHR, which is about 45, someone can easily \
+calculate the RHR:\
 \>", "CodeText",
  CellChangeTimes->{{3.739273603772829*^9, 3.739273740303833*^9}, {
    3.739273986475243*^9, 3.739273991633757*^9}, {3.739274103609413*^9, 
    3.73927415629723*^9}, 3.739274253101266*^9, {3.739274745070484*^9, 
-   3.739274751528553*^9}},ExpressionUUID->"e96e5e8e-a897-431f-9ed5-\
+   3.739274751528553*^9}, {3.739285246256226*^9, 3.739285253776823*^9}, {
+   3.739285330237423*^9, 
+   3.739285338010013*^9}},ExpressionUUID->"e96e5e8e-a897-431f-9ed5-\
 9b6e289a322b"],
 
 Cell[CellGroupData[{
@@ -2810,12 +2878,13 @@ Cell[BoxData[
 }, Open  ]],
 
 Cell["\<\
-To find out now which numbers to target on which runs, multiply the HRR by \
-the zone you want to run in and add back your resting heart rate. \
+To find out which numbers to target on which runs, we have to multiply the \
+HRR by the zone percentage you want to run in and add back your RHR. \
 \>", "Text",
  CellChangeTimes->{{3.739274846759572*^9, 3.739274880134994*^9}, {
   3.739275343710186*^9, 3.739275343954122*^9}, {3.7392753743408937`*^9, 
-  3.7392755035714493`*^9}},ExpressionUUID->"f8a28eb1-d6d0-4c85-b537-\
+  3.7392755035714493`*^9}, {3.739285275435088*^9, 
+  3.7392853219181337`*^9}},ExpressionUUID->"f8a28eb1-d6d0-4c85-b537-\
 60ce857667be"],
 
 Cell["\<\
@@ -2863,21 +2932,22 @@ bd0f924b214e"],
 
 Cell["\<\
 Enough investigations done on heart rate now, so let\[CloseCurlyQuote]s go \
-back to basic statistical analysis and focusing on covered distance now.\
+back to basic statistical analysis and focusing on covered distance.\
 \>", "Text",
  CellChangeTimes->{{3.7392221250873003`*^9, 3.739222127069468*^9}, {
   3.739222386589037*^9, 3.739222447702384*^9}, {3.73922302404557*^9, 
   3.739223063709701*^9}, {3.739275913897471*^9, 3.7392759852107553`*^9}, {
   3.7392760160840073`*^9, 3.7392760403989277`*^9}, {3.739276085268558*^9, 
-  3.739276204017415*^9}},ExpressionUUID->"3cca9a40-5f13-4d04-9451-\
+  3.739276204017415*^9}, {3.739285378584114*^9, 
+  3.739285378827277*^9}},ExpressionUUID->"3cca9a40-5f13-4d04-9451-\
 0ddd26fa73e9"],
 
 Cell["\<\
-Again calculating the mean of covered distance gives on overall level:\
+Calculating the mean of covered distance gives on overall level\
 \>", "CodeText",
  CellChangeTimes->{{3.7392236646984453`*^9, 3.739223689392569*^9}, {
-  3.739276214922306*^9, 
-  3.739276237448928*^9}},ExpressionUUID->"4aa29f03-f39a-4688-92f8-\
+  3.739276214922306*^9, 3.739276237448928*^9}, {3.739285394084889*^9, 
+  3.739285402850656*^9}},ExpressionUUID->"4aa29f03-f39a-4688-92f8-\
 13c12d7b2031"],
 
 Cell[BoxData["20.090000000000003`"], "Output",
@@ -2901,9 +2971,10 @@ Cell[BoxData["20.090000000000003`"], "Output",
  CellLabel->
   "Out[652]=",ExpressionUUID->"f954ba11-9935-4ed4-8459-d8c543b822e2"],
 
-Cell["Grouped by activity type:", "CodeText",
- CellChangeTimes->{{3.7392236646984453`*^9, 
-  3.73922372340168*^9}},ExpressionUUID->"dbcadce3-8353-41a3-977c-\
+Cell["and grouped by activity type:", "CodeText",
+ CellChangeTimes->{{3.7392236646984453`*^9, 3.73922372340168*^9}, {
+  3.7392854047439528`*^9, 
+  3.7392854068423758`*^9}},ExpressionUUID->"dbcadce3-8353-41a3-977c-\
 c63c43f3e6e0"],
 
 Cell[BoxData[
@@ -3146,24 +3217,34 @@ Cell[BoxData[
  CellLabel->
   "Out[653]=",ExpressionUUID->"b0afde0b-80cf-42d1-a74a-187c77bcee5b"],
 
-Cell["\<\
-Again the made assumption seems to be correct. This absolutely makes sense, \
-as in general more distance is covered by cycling than by running if someone \
-is not into ultra running, which I am definitely not. \
-\>", "Text",
+Cell["Again the made assumption seems to be correct. ", "Text",
  CellChangeTimes->{{3.739223919638784*^9, 3.739224076888576*^9}, {
   3.739276069396419*^9, 3.739276078884787*^9}, {3.739276257277075*^9, 
-  3.739276283589472*^9}},ExpressionUUID->"1f761a36-9e26-4b36-9ca4-\
+  3.739276283589472*^9}, {3.739285425666111*^9, 
+  3.739285425673201*^9}},ExpressionUUID->"1f761a36-9e26-4b36-9ca4-\
 41f5306da8eb"],
 
 Cell["\<\
-Finally, calculate at the correlation of \[OpenCurlyDoubleQuote]Distance\
+This absolutely makes sense, as in general more distance is covered by \
+cycling than by running if someone is not into ultra running, which I am \
+definitely not.\
+\>", "Text",
+ CellChangeTimes->{{3.739223919638784*^9, 3.739224076888576*^9}, {
+   3.739276069396419*^9, 3.739276078884787*^9}, {3.739276257277075*^9, 
+   3.739276283589472*^9}, 
+   3.7392854397304487`*^9},ExpressionUUID->"e8af8d50-88df-4e68-932b-\
+11ec6c4ecff1"],
+
+Cell["\<\
+Finally, we calculate the correlation of \[OpenCurlyDoubleQuote]Distance\
 \[CloseCurlyDoubleQuote] and \[OpenCurlyDoubleQuote]Calories\
-\[CloseCurlyDoubleQuote] :\
-\>", "CodeText",
+\[CloseCurlyDoubleQuote] .\
+\>", "Text",
  CellChangeTimes->{{3.739223919638784*^9, 3.739224049366582*^9}, {
   3.7392240793987923`*^9, 3.739224186919258*^9}, {3.739225859180352*^9, 
-  3.739225863153502*^9}},ExpressionUUID->"e4b8748e-48ae-4121-aa14-\
+  3.739225863153502*^9}, {3.739285446293003*^9, 3.73928545167094*^9}, {
+  3.739285501887134*^9, 
+  3.739285502248537*^9}},ExpressionUUID->"e4b8748e-48ae-4121-aa14-\
 afabd93575af"],
 
 Cell[CellGroupData[{
@@ -3194,13 +3275,13 @@ Cell[BoxData["0.3996986120586251`"], "Output",
 }, Open  ]],
 
 Cell["\<\
-So the correlation is not that high but a weak relationship can be seen.  \
+The correlation is not that high but a weak relationship can be seen.  \
 \>", "Text",
  CellChangeTimes->{{3.739224267862464*^9, 3.7392243067863817`*^9}, {
    3.739224410234356*^9, 3.739224450642446*^9}, {3.7392245308533792`*^9, 
    3.7392245319324923`*^9}, 3.739224563096448*^9, {3.739224608221097*^9, 
-   3.739224633182719*^9}, {3.739224764670835*^9, 
-   3.739224768912129*^9}},ExpressionUUID->"6039fd02-92b4-4b31-aa21-\
+   3.739224633182719*^9}, {3.739224764670835*^9, 3.739224768912129*^9}, 
+   3.739285478063251*^9},ExpressionUUID->"6039fd02-92b4-4b31-aa21-\
 b2f42f7f7f92"],
 
 Cell["\<\
@@ -3570,7 +3651,7 @@ Cell[BoxData[
                "RoundingRadius" -> 0]},
              
              ImageSizeCache->{{192.4824807177671, 
-              223.63189313302865`}, {-140.98931552976597`, \
+              223.6318931330286}, {-140.98931552976597`, \
 -18.796995065553475`}}],
             StatusArea[#, 0.9473684210526315]& ,
             TagBoxNote->"0.9473684210526315"],
@@ -3589,7 +3670,7 @@ Cell[BoxData[
                  Opacity[0.66]}], {}, {}], 
               RectangleBox[{60., 0}, {70., 1.}, "RoundingRadius" -> 0]},
              
-             ImageSizeCache->{{223.13189313302865`, 
+             ImageSizeCache->{{223.1318931330286, 
               254.28130554829022`}, {-147.75, -18.79699506555346}}],
             StatusArea[#, 1]& ,
             TagBoxNote->"1"],
@@ -3624,22 +3705,25 @@ Cell[BoxData[
 }, Open  ]],
 
 Cell[TextData[{
- "As Wolfram Language also offers to fit the data to a known parametric \
-distribution using ",
- StyleBox["FindDistribution ",
+ "As the Wolfram Language also offers tools to find the underlying \
+distribution of data, let us try to fit the visualized data above using ",
+ StyleBox["FindDistribution",
   FontWeight->"Bold"],
- "let us try this for the distance data visualized above."
+ "."
 }], "Text",
  CellChangeTimes->{{3.739225024659746*^9, 3.7392252041256647`*^9}, {
-  3.7392252803042088`*^9, 
-  3.7392252803085814`*^9}},ExpressionUUID->"7527b568-23c5-4ad9-b243-\
+  3.7392252803042088`*^9, 3.7392252803085814`*^9}, {3.73928552928734*^9, 
+  3.739285556810452*^9}, {3.739285597032453*^9, 3.739285672078815*^9}, {
+  3.739285727151723*^9, 
+  3.739285830820654*^9}},ExpressionUUID->"7527b568-23c5-4ad9-b243-\
 f247ec676b5f"],
 
-Cell["Find the underlying distribution of the data", "CodeText",
+Cell["First, we calculate the underlying distribution of the data", "CodeText",
  CellChangeTimes->{{3.739225024659746*^9, 3.7392252041256647`*^9}, {
    3.73922528418734*^9, 3.739225298058312*^9}, 3.739225593787809*^9, {
    3.7392258946205807`*^9, 3.739225897395357*^9}, {3.7392259510724688`*^9, 
-   3.739225963993442*^9}},ExpressionUUID->"85e0de1b-cdbb-4be7-8eb6-\
+   3.739225963993442*^9}, {3.739285693733364*^9, 3.73928571211485*^9}, 
+   3.739285842368088*^9},ExpressionUUID->"85e0de1b-cdbb-4be7-8eb6-\
 2f8bf4e1b143"],
 
 Cell[CellGroupData[{
@@ -4228,7 +4312,7 @@ NsXSsVG/67dAtz68WWm6zx1PRwnFwy+ky/SBZzbxDXsiHc9m7yBbpuqD3ojV
                 "RoundingRadius" -> 0]},
               
               ImageSizeCache->{{192.4824807177671, 
-               223.63189313302865`}, {-140.98931552976597`, \
+               223.6318931330286}, {-140.98931552976597`, \
 -18.796995065553475`}}],
              StatusArea[#, 0.9473684210526315]& ,
              TagBoxNote->"0.9473684210526315"],
@@ -4247,7 +4331,7 @@ NsXSsVG/67dAtz68WWm6zx1PRwnFwy+ky/SBZzbxDXsiHc9m7yBbpuqD3ojV
                   Opacity[0.66]}], {}, {}], 
                RectangleBox[{60., 0}, {70., 1.}, "RoundingRadius" -> 0]},
               
-              ImageSizeCache->{{223.13189313302865`, 
+              ImageSizeCache->{{223.1318931330286, 
                254.28130554829022`}, {-147.75, -18.79699506555346}}],
              StatusArea[#, 1]& ,
              TagBoxNote->"1"],
@@ -4399,22 +4483,22 @@ f39fwwc5w5nIVl6dxqJs0L5r4W8EE3dt936/RPl/J+69jw==
 Cell["\<\
 This looks very reasonable as someone can see two \
 \[OpenCurlyDoubleQuote]peaks\[CloseCurlyDoubleQuote] regarding the PDF, one \
-regarding running activities and one regarding cycling.\
+regarding running and one regarding cycling activities .\
 \>", "Text",
  CellChangeTimes->{{3.739225690684952*^9, 3.7392257647141867`*^9}, {
-  3.739225902296658*^9, 
-  3.739225902299117*^9}},ExpressionUUID->"29842694-df31-43e1-a889-\
+  3.739225902296658*^9, 3.739225902299117*^9}, {3.7392859571905746`*^9, 
+  3.7392859623949757`*^9}},ExpressionUUID->"29842694-df31-43e1-a889-\
 5ce4a5949861"],
 
 Cell["\<\
-Since having found an underlying distribution let\[CloseCurlyQuote]s \
-calculate how likely I cover a distance of more than twelve kilometers.\
+Since having found an underlying distribution, let\[CloseCurlyQuote]s \
+calculate how likely covering a distance of more than twelve kilometers is.\
 \>", "Text",
  CellChangeTimes->{{3.739225690684952*^9, 3.7392257647141867`*^9}, {
   3.7392259064964113`*^9, 3.739225917852323*^9}, {3.739225972712287*^9, 
   3.739226083301895*^9}, {3.739226114339349*^9, 3.739226142278965*^9}, {
-  3.7392262012032537`*^9, 
-  3.739226201869864*^9}},ExpressionUUID->"a39e1100-daef-48da-a6da-\
+  3.7392262012032537`*^9, 3.739226201869864*^9}, {3.739285971803087*^9, 
+  3.739285992389926*^9}},ExpressionUUID->"a39e1100-daef-48da-a6da-\
 15dfc6d80b11"],
 
 Cell[CellGroupData[{
@@ -4435,38 +4519,52 @@ Cell[BoxData["0.37384626544650734`"], "Output",
 }, Open  ]],
 
 Cell["\<\
-That probability is low but again reasonable as  most of the time I am \
-running between five and ten kilometers. Moreover, I did some short cycling \
-tours too.  For now enough statistical analysis was done, so let\
-\[CloseCurlyQuote]s focus on visualization in the second part.\
+That probability is low but again reasonable as most of the time the running \
+distance is between five and ten kilometers. Moreover, some short cycling \
+tours were done too.  \
 \>", "Text",
  CellChangeTimes->{{3.739225690684952*^9, 3.7392257647141867`*^9}, {
   3.7392259064964113`*^9, 3.739225917852323*^9}, {3.739225972712287*^9, 
   3.739226083301895*^9}, {3.739226114339349*^9, 3.739226131380694*^9}, {
   3.7392262396577044`*^9, 3.739226399335548*^9}, {3.7392264521712523`*^9, 
   3.73922655409184*^9}, {3.73922661999688*^9, 3.739226732727241*^9}, {
-  3.739226904014398*^9, 
-  3.7392269045161257`*^9}},ExpressionUUID->"9d9d9923-b8f6-400d-beb6-\
-e26911b8d436"]
+  3.739226904014398*^9, 3.7392269045161257`*^9}, {3.739286004069725*^9, 
+  3.739286055004692*^9}},ExpressionUUID->"9d9d9923-b8f6-400d-beb6-\
+e26911b8d436"],
+
+Cell["\<\
+For now enough statistical analysis was done, so let's focus on visualization \
+in the second part.\
+\>", "Text",
+ CellChangeTimes->{{3.739225690684952*^9, 3.7392257647141867`*^9}, {
+  3.7392259064964113`*^9, 3.739225917852323*^9}, {3.739225972712287*^9, 
+  3.739226083301895*^9}, {3.739226114339349*^9, 3.739226131380694*^9}, {
+  3.7392262396577044`*^9, 3.739226399335548*^9}, {3.7392264521712523`*^9, 
+  3.73922655409184*^9}, {3.73922661999688*^9, 3.739226732727241*^9}, {
+  3.739226904014398*^9, 3.7392269045161257`*^9}, {3.739286004069725*^9, 
+  3.7392860647920647`*^9}},ExpressionUUID->"408e2271-f099-43b3-93e2-\
+ecaddc7b4034"]
 }, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell["Visualization of activity data", "Section",
+Cell["Visualization of Activity Data", "Section",
  CellChangeTimes->{
   3.716825484342502*^9, {3.7169024799646597`*^9, 3.716902483419626*^9}, {
    3.716902529770506*^9, 3.7169025326018753`*^9}, {3.736094413190734*^9, 
-   3.7360944203553658`*^9}, {3.739226908879676*^9, 
-   3.739226940800247*^9}},ExpressionUUID->"363992ed-65d6-4a46-9388-\
+   3.7360944203553658`*^9}, {3.739226908879676*^9, 3.739226940800247*^9}, {
+   3.739286725523799*^9, 
+   3.739286727380488*^9}},ExpressionUUID->"363992ed-65d6-4a46-9388-\
 9c42d41918e4"],
 
 Cell["\<\
-The Wolfram Language offers many tools for data visualization. A few will be \
-shown in this section below.\
+As the Wolfram Language offers many tools for data visualization, a few will \
+be shown in this section below.\
 \>", "Text",
- CellChangeTimes->{{3.739227631534429*^9, 
-  3.7392277185098047`*^9}},ExpressionUUID->"c542cc95-bd7a-4055-8d12-\
+ CellChangeTimes->{{3.739227631534429*^9, 3.7392277185098047`*^9}, {
+  3.7392860763838663`*^9, 
+  3.739286083952898*^9}},ExpressionUUID->"c542cc95-bd7a-4055-8d12-\
 8d8d0b34a362"],
 
 Cell["\<\
@@ -6621,13 +6719,15 @@ Jg8=
 }, Open  ]],
 
 Cell["\<\
-These are the route of running and cycling activities done in the last month. \
-Someone can easily differentiate the running and cycling routes as the latter \
-cover a bigger area. Not obvious but at least I know, the last graphic of the \
-plot shows the route of the cycling tour done in Waltham, Massachusetts. \
+These are the routes of running and cycling activities done in the last \
+month. Someone can easily differentiate between the running and cycling \
+routes as the latter cover a bigger area. Not obvious but at least I know, \
+the last graphic of the grid shows the route of the cycling tour done in \
+Waltham, Massachusetts. \
 \>", "Text",
- CellChangeTimes->{{3.739227792024118*^9, 
-  3.739227998993487*^9}},ExpressionUUID->"7f48dcb3-4cbd-429e-b33d-\
+ CellChangeTimes->{{3.739227792024118*^9, 3.739227998993487*^9}, {
+  3.73928609787957*^9, 3.739286109760264*^9}, {3.739286145335115*^9, 
+  3.739286157729423*^9}},ExpressionUUID->"7f48dcb3-4cbd-429e-b33d-\
 6940676aa4c3"],
 
 Cell["\<\
@@ -17493,23 +17593,26 @@ eTs5zYBbP9FKp0WeiODScWZJg7SUaOFJTbfhL5F3x/ez/wcxq2ra\
 }, {2}]],
 
 Cell["\<\
-Someone can see that if it is going down, the speed is getting higher.  Nice \
-to look at, but as nobody knows the route  direction (except me) and going up \
-or down depends on that the before mentioned negative correlation cannot be \
-seen immediately.  \
+Someone can see that if the altitude gets lower, the speed is getting higher. \
+ Nice to look at but as nobody knows the route direction and going up or down \
+depends on this hidden information the next graphic will create clarity.  \
 \>", "Text",
- CellChangeTimes->{{3.7392287057909517`*^9, 
-  3.739228986275366*^9}},ExpressionUUID->"683f24cb-7940-4974-8263-\
+ CellChangeTimes->{{3.7392287057909517`*^9, 3.739228986275366*^9}, {
+  3.7392862061453333`*^9, 3.739286278696064*^9}, {3.739286321564146*^9, 
+  3.739286344613462*^9}, {3.7392863838311462`*^9, 3.739286386689267*^9}, {
+  3.7392864409146*^9, 3.7392864508476067`*^9}, {3.739286487355186*^9, 
+  3.739286492883952*^9}, {3.7392865604015627`*^9, 
+  3.739286561882853*^9}},ExpressionUUID->"683f24cb-7940-4974-8263-\
 393ab4071470"],
 
 Cell[TextData[{
- "Therefore, an interactive map is plotted by using ",
+ "An interactive map is plotted by using ",
  StyleBox["Manipulate",
   FontWeight->"Bold"],
  ":"
 }], "CodeText",
- CellChangeTimes->{{3.739228999680129*^9, 
-  3.73922907594268*^9}},ExpressionUUID->"028bd3b2-0423-476e-a654-\
+ CellChangeTimes->{{3.739228999680129*^9, 3.73922907594268*^9}, 
+   3.739286507265332*^9},ExpressionUUID->"028bd3b2-0423-476e-a654-\
 d287e30485e1"],
 
 Cell[CellGroupData[{
@@ -17563,10 +17666,10 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`pointsToShow$$ = 1191, Typeset`show$$ = 
-    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{{
+   DynamicModuleBox[{$CellContext`pointsToShow$$ = 165.39442431601398`, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[$CellContext`pointsToShow$$], 1191, "Cycling distance"}, 0, 
       1191}}, Typeset`size$$ = {359., {207., 213.}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = 
@@ -17593,7 +17696,7 @@ Cell[BoxData[
             Part[$CellContext`inFit, All, 8], $CellContext`pointsToShow$$]], 
          AnimationDirection -> Forward}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{406., {251., 258.}},
+     ImageSizeCache->{406., {262., 269.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -21033,7 +21136,7 @@ the range of latitude and longitude to include. "]};
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{
   3.7392291046833277`*^9, {3.7392291390581617`*^9, 3.739229147617703*^9}, 
-   3.7392322067671328`*^9, 3.739270818256269*^9},
+   3.7392322067671328`*^9, 3.739270818256269*^9, 3.7392865152261457`*^9},
  CellLabel->
   "Out[872]=",ExpressionUUID->"9cafbab3-ccae-439c-9dd7-53326df6e0a7"]
 }, {2}]],
@@ -21044,21 +21147,23 @@ Cell[BoxData[""], "Input",
 c97effcd9c70"],
 
 Cell["\<\
-Someone can see that the Wolfram Language offers many useful tools when it \
-comes to analyse data, both for statistics and also for visualization purpose.\
+Looking at all the shown results and figures above, someone can see that the \
+Wolfram Language offers many useful tools when it comes to analyse data, both \
+for statistics and also for visualization purpose.\
 \>", "Text",
  CellChangeTimes->{{3.7392300919638*^9, 3.739230180501128*^9}, {
-  3.739230213314294*^9, 
-  3.739230245309821*^9}},ExpressionUUID->"f48beef4-2942-45f6-aac5-\
+  3.739230213314294*^9, 3.739230245309821*^9}, {3.739286592155369*^9, 
+  3.739286618447497*^9}},ExpressionUUID->"f48beef4-2942-45f6-aac5-\
 65a4de312237"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell["Further explorations", "Section",
+Cell["Further Explorations", "Section",
  CellChangeTimes->{{3.70077612322993*^9, 3.7007761320921593`*^9}, {
   3.7007787731699142`*^9, 3.70077877480995*^9}, {3.735655649442748*^9, 
-  3.735655649665411*^9}},ExpressionUUID->"9da19663-7179-45c9-8160-\
+  3.735655649665411*^9}, {3.739286732362279*^9, 
+  3.7392867328002234`*^9}},ExpressionUUID->"9da19663-7179-45c9-8160-\
 ad35832309c2"],
 
 Cell["\<\
@@ -21076,9 +21181,10 @@ athletes too would be great to do even more statistical analysis.\
 
 Cell[CellGroupData[{
 
-Cell["Author contact information", "Section",
- CellChangeTimes->{{3.736868777412567*^9, 
-  3.736868791070746*^9}},ExpressionUUID->"a78f6e4f-dbdf-4763-a44f-\
+Cell["Author Contact Information", "Section",
+ CellChangeTimes->{{3.736868777412567*^9, 3.736868791070746*^9}, {
+  3.739286734402173*^9, 
+  3.739286736720689*^9}},ExpressionUUID->"a78f6e4f-dbdf-4763-a44f-\
 16569b36e665"],
 
 Cell["sabrina.kuhrn@gmx.at", "Text",
@@ -21104,16 +21210,59 @@ Cell["", "Subsection",
    3.739227011789263*^9},ExpressionUUID->"d6c5abda-8183-41cc-9f3d-\
 132ba5a38cb4"],
 
+Cell[CellGroupData[{
+
 Cell["", "Subsection",
  CellChangeTimes->{{3.7356560569996862`*^9, 3.735656073616704*^9}, {
    3.736090288389758*^9, 3.73609028878813*^9}, 
    3.739226993808085*^9},ExpressionUUID->"f9a42e24-3257-4b35-8468-\
-5b9b14030d1c"]
+5b9b14030d1c"],
+
+Cell[TextData[{
+ "\t",
+ StyleBox["1",
+  FontVariations->{"CompatibilityType"->"Superscript"}],
+ "\t",
+ "https",
+ ":",
+ "//",
+ "www",
+ ".",
+ "runnersworld",
+ ".",
+ "com",
+ "/",
+ "beginner",
+ "/",
+ "a20812270",
+ "/",
+ "should",
+ "-",
+ "i",
+ "-",
+ "do",
+ "-",
+ "heart",
+ "-",
+ "rate",
+ "-",
+ "training",
+ "/"
+}], "Reference",
+ Editable->False,
+ TaggingRules->{ReferenceNoteData -> ""},
+ CellTags->"00004B11",ExpressionUUID->"a4ab6141-a94d-4318-9a66-5c42abab96f1"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1323, 744},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowMargins->{{0, Automatic}, {Automatic, 28}},
+PrintingCopies->1,
+PrintingPageRange->{Automatic, Automatic},
+PrintingOptions->{"PaperOrientation"->"Portrait",
+"PaperSize"->{Automatic, Automatic},
+"PostScriptOutputFile"->"/home/sabrina/print.pdf"},
 FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 7, 2018)",
 StyleDefinitions->Notebook[{
    Cell[
@@ -21398,10 +21547,16 @@ StyleDefinitions->Notebook[{
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{}
+CellTagsIndex->{
+ "00004B11"->{
+  Cell[1223497, 21220, 460, 33, 30, "Reference",ExpressionUUID->"a4ab6141-a94d-4318-9a66-5c42abab96f1",
+   CellTags->"00004B11"]}
+ }
 *)
 (*CellTagsIndex
-CellTagsIndex->{}
+CellTagsIndex->{
+ {"00004B11", 1237554, 21550}
+ }
 *)
 (*NotebookFileOutline
 Notebook[{
@@ -21410,154 +21565,163 @@ Cell[580, 22, 395, 6, 140, "Title",ExpressionUUID->"755e0098-9782-4df5-8299-7f54
 Cell[978, 30, 761, 13, 48, "Abstract",ExpressionUUID->"db4efd27-b72d-4835-a486-b18956bba0cb"],
 Cell[1742, 45, 624, 9, 45, "AuthorInfo",ExpressionUUID->"59a63784-4e95-46b9-9a1d-2c013f47161b"],
 Cell[2369, 56, 71, 0, 34, "Text",ExpressionUUID->"85271f44-5b04-421c-bf31-0395fab10c35"],
-Cell[2443, 58, 1077, 17, 57, "Text",ExpressionUUID->"99ddfba3-f2e4-48aa-a886-7472bbc581ac"],
+Cell[2443, 58, 1204, 19, 57, "Text",ExpressionUUID->"99ddfba3-f2e4-48aa-a886-7472bbc581ac"],
 Cell[CellGroupData[{
-Cell[3545, 79, 597, 9, 72, "Section",ExpressionUUID->"35feb7e4-4e93-4e64-abc0-7b0b86e8128f"],
-Cell[4145, 90, 1219, 18, 57, "Text",ExpressionUUID->"6047e34c-4783-4ed0-b0de-5328517365be"],
-Cell[5367, 110, 724, 14, 29, "Input",ExpressionUUID->"6a57f104-ade9-4e69-9c46-f4f2c59d53ab"],
-Cell[6094, 126, 226, 4, 31, "CodeText",ExpressionUUID->"56a60494-33cf-4c3a-b7f3-305b93f293e1"],
-Cell[6323, 132, 67933, 1403, 531, "Output",ExpressionUUID->"b61fb27f-d120-4978-a4e5-c997dfc824cd"],
-Cell[74259, 1537, 379, 8, 31, "CodeText",ExpressionUUID->"95407e74-9f5b-4ccd-8d66-1dee5aee8f3c"],
+Cell[3672, 81, 644, 10, 72, "Section",ExpressionUUID->"35feb7e4-4e93-4e64-abc0-7b0b86e8128f"],
+Cell[4319, 93, 1301, 18, 57, "Text",ExpressionUUID->"6047e34c-4783-4ed0-b0de-5328517365be"],
+Cell[5623, 113, 724, 14, 29, "Input",ExpressionUUID->"6a57f104-ade9-4e69-9c46-f4f2c59d53ab"],
+Cell[6350, 129, 226, 4, 31, "CodeText",ExpressionUUID->"56a60494-33cf-4c3a-b7f3-305b93f293e1"],
+Cell[6579, 135, 67933, 1403, 531, "Output",ExpressionUUID->"b61fb27f-d120-4978-a4e5-c997dfc824cd"],
+Cell[74515, 1540, 379, 8, 31, "CodeText",ExpressionUUID->"95407e74-9f5b-4ccd-8d66-1dee5aee8f3c"],
 Cell[CellGroupData[{
-Cell[74663, 1549, 980, 23, 120, "Code",ExpressionUUID->"1f3b4aa8-1370-44c8-aae6-6476cd75b061"],
-Cell[75646, 1574, 813, 15, 57, "Output",ExpressionUUID->"0f0b5009-f361-40a0-aa5e-82dde5a507ea"]
+Cell[74919, 1552, 980, 23, 120, "Code",ExpressionUUID->"1f3b4aa8-1370-44c8-aae6-6476cd75b061"],
+Cell[75902, 1577, 813, 15, 57, "Output",ExpressionUUID->"0f0b5009-f361-40a0-aa5e-82dde5a507ea"]
 }, {2}]],
-Cell[76471, 1592, 169, 3, 31, "CodeText",ExpressionUUID->"bf95f57b-9dec-499d-a24c-c428198a21c3"],
+Cell[76727, 1595, 169, 3, 31, "CodeText",ExpressionUUID->"bf95f57b-9dec-499d-a24c-c428198a21c3"],
 Cell[CellGroupData[{
-Cell[76665, 1599, 387, 10, 53, "Code",ExpressionUUID->"be1d4384-bbe0-44f5-91ea-e8b09dbff01f"],
-Cell[77055, 1611, 9198, 237, 169, "Output",ExpressionUUID->"23b0d5f1-de2f-444d-ab74-ea9be8b1062c"]
+Cell[76921, 1602, 387, 10, 53, "Code",ExpressionUUID->"be1d4384-bbe0-44f5-91ea-e8b09dbff01f"],
+Cell[77311, 1614, 9198, 237, 169, "Output",ExpressionUUID->"23b0d5f1-de2f-444d-ab74-ea9be8b1062c"]
 }, {2}]],
-Cell[86265, 1851, 1241, 19, 80, "Text",ExpressionUUID->"75bd5e05-b4e9-4864-acf5-02b94c00ecbd"]
+Cell[86521, 1854, 1441, 21, 80, "Text",ExpressionUUID->"75bd5e05-b4e9-4864-acf5-02b94c00ecbd"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[87543, 1875, 413, 7, 72, "Section",ExpressionUUID->"69c2789e-757d-42de-8e7a-aa67a7c35b9d"],
-Cell[87959, 1884, 258, 6, 34, "Text",ExpressionUUID->"904c5895-9477-495f-b2fe-b04dd44ce7bb"],
-Cell[88220, 1892, 1024, 27, 76, "Input",ExpressionUUID->"839e0fea-3511-4881-a2e9-b30fd1fa1962"],
-Cell[89247, 1921, 163, 3, 31, "CodeText",ExpressionUUID->"b17ae705-d99e-421c-858d-b53cf61d0267"],
-Cell[89413, 1926, 4030, 108, 246, "Output",ExpressionUUID->"c6cc7189-dcbe-4360-9548-9596e4bd2b89"],
-Cell[93446, 2036, 743, 12, 57, "Text",ExpressionUUID->"26b65c08-ec0b-409a-8812-be8cd0242004"],
-Cell[94192, 2050, 165, 3, 31, "CodeText",ExpressionUUID->"8f43f5a3-0c2d-4fe0-84ac-29e201e979f5"],
+Cell[87999, 1880, 413, 7, 72, "Section",ExpressionUUID->"69c2789e-757d-42de-8e7a-aa67a7c35b9d"],
+Cell[88415, 1889, 364, 10, 34, "Text",ExpressionUUID->"904c5895-9477-495f-b2fe-b04dd44ce7bb"],
+Cell[88782, 1901, 1024, 27, 76, "Input",ExpressionUUID->"839e0fea-3511-4881-a2e9-b30fd1fa1962"],
+Cell[89809, 1930, 163, 3, 31, "CodeText",ExpressionUUID->"b17ae705-d99e-421c-858d-b53cf61d0267"],
+Cell[89975, 1935, 3990, 107, 246, "Output",ExpressionUUID->"c6cc7189-dcbe-4360-9548-9596e4bd2b89"],
+Cell[93968, 2044, 564, 10, 34, "Text",ExpressionUUID->"26b65c08-ec0b-409a-8812-be8cd0242004"],
+Cell[94535, 2056, 674, 11, 34, "Text",ExpressionUUID->"076561b8-9d1e-437b-b0c1-2b1b051c3b10"],
+Cell[95212, 2069, 165, 3, 31, "CodeText",ExpressionUUID->"8f43f5a3-0c2d-4fe0-84ac-29e201e979f5"],
 Cell[CellGroupData[{
-Cell[94382, 2057, 512, 11, 29, "Input",ExpressionUUID->"2819c879-3936-406e-b29b-d5b17ef6a157"],
-Cell[94897, 2070, 169, 3, 33, "Output",ExpressionUUID->"3d384c0a-d83f-4774-837c-31e04ea0f0bf"]
+Cell[95402, 2076, 512, 11, 29, "Input",ExpressionUUID->"2819c879-3936-406e-b29b-d5b17ef6a157"],
+Cell[95917, 2089, 169, 3, 33, "Output",ExpressionUUID->"3d384c0a-d83f-4774-837c-31e04ea0f0bf"]
 }, Open  ]],
-Cell[95081, 2076, 173, 3, 31, "CodeText",ExpressionUUID->"2e68835c-db71-4e4c-b6b5-37fe02bc5833"],
+Cell[96101, 2095, 173, 3, 31, "CodeText",ExpressionUUID->"2e68835c-db71-4e4c-b6b5-37fe02bc5833"],
 Cell[CellGroupData[{
-Cell[95279, 2083, 383, 9, 29, "Input",ExpressionUUID->"befbdccc-a1da-4cfb-b02b-d5222cec5ae1"],
-Cell[95665, 2094, 12033, 223, 83, "Output",ExpressionUUID->"2b50ab36-5f22-4ef7-ad80-b486df73d5ef"]
+Cell[96299, 2102, 383, 9, 29, "Input",ExpressionUUID->"befbdccc-a1da-4cfb-b02b-d5222cec5ae1"],
+Cell[96685, 2113, 12033, 223, 83, "Output",ExpressionUUID->"2b50ab36-5f22-4ef7-ad80-b486df73d5ef"]
 }, Open  ]],
-Cell[107713, 2320, 1085, 17, 57, "Text",ExpressionUUID->"00d9d8c2-22e7-4e59-9f41-d966131b7b87"],
-Cell[108801, 2339, 646, 12, 57, "Text",ExpressionUUID->"2cd52c10-34d7-4321-afa2-2dbc7c53bc50"],
-Cell[109450, 2353, 536, 9, 26, "InlineFormula",ExpressionUUID->"5e5effca-e8f0-4465-bd28-8496c326f05b"],
-Cell[109989, 2364, 868, 14, 80, "Text",ExpressionUUID->"41c3d5f7-b341-4eea-bd5c-14076d49e29f"],
-Cell[110860, 2380, 357, 6, 34, "Text",ExpressionUUID->"33abb185-feae-45e1-be63-225d426262b3"],
+Cell[108733, 2339, 296, 6, 31, "CodeText",ExpressionUUID->"39228812-148c-42a1-be69-4d44a0f6ba50"],
+Cell[109032, 2347, 1170, 18, 57, "Text",ExpressionUUID->"00d9d8c2-22e7-4e59-9f41-d966131b7b87"],
+Cell[110205, 2367, 664, 12, 57, "Text",ExpressionUUID->"2cd52c10-34d7-4321-afa2-2dbc7c53bc50"],
+Cell[110872, 2381, 536, 9, 26, "InlineFormula",ExpressionUUID->"5e5effca-e8f0-4465-bd28-8496c326f05b"],
+Cell[111411, 2392, 917, 15, 80, "Text",ExpressionUUID->"41c3d5f7-b341-4eea-bd5c-14076d49e29f"],
+Cell[112331, 2409, 357, 6, 34, "Text",ExpressionUUID->"33abb185-feae-45e1-be63-225d426262b3"],
 Cell[CellGroupData[{
-Cell[111242, 2390, 557, 11, 29, "Input",ExpressionUUID->"91218dd6-fdab-429a-98ad-5be09a71465a"],
-Cell[111802, 2403, 183, 3, 33, "Output",ExpressionUUID->"118c7dbd-c6ac-4af9-85a8-e3cb2d864906"]
+Cell[112713, 2419, 557, 11, 29, "Input",ExpressionUUID->"91218dd6-fdab-429a-98ad-5be09a71465a"],
+Cell[113273, 2432, 183, 3, 33, "Output",ExpressionUUID->"118c7dbd-c6ac-4af9-85a8-e3cb2d864906"]
 }, Open  ]],
-Cell[112000, 2409, 427, 6, 34, "Text",ExpressionUUID->"adb40bd2-dfb3-4818-abd6-54df81fa8336"],
+Cell[113471, 2438, 427, 6, 34, "Text",ExpressionUUID->"adb40bd2-dfb3-4818-abd6-54df81fa8336"],
 Cell[CellGroupData[{
-Cell[112452, 2419, 334, 8, 29, "Input",ExpressionUUID->"117b1f94-0c6a-48d0-853b-3b357cd1f32a"],
-Cell[112789, 2429, 172, 3, 33, "Output",ExpressionUUID->"bc7d81d9-34a8-4ebf-ad99-f3d03c5aea0d"]
+Cell[113923, 2448, 334, 8, 29, "Input",ExpressionUUID->"117b1f94-0c6a-48d0-853b-3b357cd1f32a"],
+Cell[114260, 2458, 172, 3, 33, "Output",ExpressionUUID->"bc7d81d9-34a8-4ebf-ad99-f3d03c5aea0d"]
 }, Open  ]],
-Cell[112976, 2435, 1387, 20, 103, "Text",ExpressionUUID->"d5f088f8-68d7-4f13-b8a3-c04a8476f067"],
-Cell[114366, 2457, 728, 12, 31, "CodeText",ExpressionUUID->"efb3e5b6-95ca-42f2-bd3d-e0d1f94fb996"],
+Cell[114447, 2464, 899, 15, 34, "Text",ExpressionUUID->"d5f088f8-68d7-4f13-b8a3-c04a8476f067"],
+Cell[115349, 2481, 2104, 38, 113, "Text",ExpressionUUID->"974f8ed7-1bf4-4da9-b217-49bb07406af8"],
+Cell[117456, 2521, 779, 13, 31, "CodeText",ExpressionUUID->"efb3e5b6-95ca-42f2-bd3d-e0d1f94fb996"],
 Cell[CellGroupData[{
-Cell[115119, 2473, 1029, 19, 53, "Code",ExpressionUUID->"fb809cc8-3f73-4eb2-a8b8-b1925dea9e6b"],
-Cell[116151, 2494, 14527, 277, 107, "Output",ExpressionUUID->"e292aab9-7142-4ebb-b223-7f66ddc2fd64"]
+Cell[118260, 2538, 1029, 19, 53, "Code",ExpressionUUID->"fb809cc8-3f73-4eb2-a8b8-b1925dea9e6b"],
+Cell[119292, 2559, 14527, 277, 107, "Output",ExpressionUUID->"e292aab9-7142-4ebb-b223-7f66ddc2fd64"]
 }, {2}]],
-Cell[130690, 2774, 435, 8, 31, "CodeText",ExpressionUUID->"e96e5e8e-a897-431f-9ed5-9b6e289a322b"],
+Cell[133831, 2839, 594, 11, 31, "CodeText",ExpressionUUID->"e96e5e8e-a897-431f-9ed5-9b6e289a322b"],
 Cell[CellGroupData[{
-Cell[131150, 2786, 739, 16, 53, "Input",ExpressionUUID->"9a362081-89d8-4beb-86e9-9788877f9ac0"],
-Cell[131892, 2804, 193, 4, 33, "Output",ExpressionUUID->"5bdbf585-65a9-4471-b3f3-9706f104676b"]
+Cell[134450, 2854, 739, 16, 53, "Input",ExpressionUUID->"9a362081-89d8-4beb-86e9-9788877f9ac0"],
+Cell[135192, 2872, 193, 4, 33, "Output",ExpressionUUID->"5bdbf585-65a9-4471-b3f3-9706f104676b"]
 }, Open  ]],
-Cell[132100, 2811, 392, 7, 34, "Text",ExpressionUUID->"f8a28eb1-d6d0-4c85-b537-60ce857667be"],
-Cell[132495, 2820, 442, 9, 31, "CodeText",ExpressionUUID->"d5e8b2e1-f85f-4caa-84e0-2bd0adacd537"],
+Cell[135400, 2879, 446, 8, 34, "Text",ExpressionUUID->"f8a28eb1-d6d0-4c85-b537-60ce857667be"],
+Cell[135849, 2889, 442, 9, 31, "CodeText",ExpressionUUID->"d5e8b2e1-f85f-4caa-84e0-2bd0adacd537"],
 Cell[CellGroupData[{
-Cell[132962, 2833, 602, 10, 29, "Input",ExpressionUUID->"c778fc89-f028-47b0-a008-97b7a541f501"],
-Cell[133567, 2845, 216, 4, 33, "Output",ExpressionUUID->"3fb023e2-6d44-4257-806f-1b174a6ef81f"]
+Cell[136316, 2902, 602, 10, 29, "Input",ExpressionUUID->"c778fc89-f028-47b0-a008-97b7a541f501"],
+Cell[136921, 2914, 216, 4, 33, "Output",ExpressionUUID->"3fb023e2-6d44-4257-806f-1b174a6ef81f"]
 }, Open  ]],
-Cell[133798, 2852, 460, 9, 34, "Text",ExpressionUUID->"7a822d94-0754-4cc7-92a5-bd0f924b214e"],
-Cell[134261, 2863, 545, 9, 34, "Text",ExpressionUUID->"3cca9a40-5f13-4d04-9451-0ddd26fa73e9"],
-Cell[134809, 2874, 275, 6, 31, "CodeText",ExpressionUUID->"4aa29f03-f39a-4688-92f8-13c12d7b2031"],
-Cell[135087, 2882, 1351, 19, 33, "Output",ExpressionUUID->"f954ba11-9935-4ed4-8459-d8c543b822e2"],
-Cell[136441, 2903, 172, 3, 31, "CodeText",ExpressionUUID->"dbcadce3-8353-41a3-977c-c63c43f3e6e0"],
-Cell[136616, 2908, 13175, 238, 83, "Output",ExpressionUUID->"b0afde0b-80cf-42d1-a74a-187c77bcee5b"],
-Cell[149794, 3148, 456, 8, 57, "Text",ExpressionUUID->"1f761a36-9e26-4b36-9ca4-41f5306da8eb"],
-Cell[150253, 3158, 413, 8, 31, "CodeText",ExpressionUUID->"e4b8748e-48ae-4121-aa14-afabd93575af"],
+Cell[137152, 2921, 460, 9, 34, "Text",ExpressionUUID->"7a822d94-0754-4cc7-92a5-bd0f924b214e"],
+Cell[137615, 2932, 590, 10, 34, "Text",ExpressionUUID->"3cca9a40-5f13-4d04-9451-0ddd26fa73e9"],
+Cell[138208, 2944, 314, 6, 31, "CodeText",ExpressionUUID->"4aa29f03-f39a-4688-92f8-13c12d7b2031"],
+Cell[138525, 2952, 1351, 19, 33, "Output",ExpressionUUID->"f954ba11-9935-4ed4-8459-d8c543b822e2"],
+Cell[139879, 2973, 229, 4, 31, "CodeText",ExpressionUUID->"dbcadce3-8353-41a3-977c-c63c43f3e6e0"],
+Cell[140111, 2979, 13175, 238, 83, "Output",ExpressionUUID->"b0afde0b-80cf-42d1-a74a-187c77bcee5b"],
+Cell[153289, 3219, 333, 5, 34, "Text",ExpressionUUID->"1f761a36-9e26-4b36-9ca4-41f5306da8eb"],
+Cell[153625, 3226, 438, 9, 34, "Text",ExpressionUUID->"e8af8d50-88df-4e68-932b-11ec6c4ecff1"],
+Cell[154066, 3237, 506, 10, 34, "Text",ExpressionUUID->"e4b8748e-48ae-4121-aa14-afabd93575af"],
 Cell[CellGroupData[{
-Cell[150691, 3170, 652, 17, 29, "Input",ExpressionUUID->"55bcb16d-c93c-4369-acd8-40454524dfb4"],
-Cell[151346, 3189, 171, 3, 33, "Output",ExpressionUUID->"3034cb18-7ad2-40e5-87b4-be59157c0749"]
+Cell[154597, 3251, 652, 17, 29, "Input",ExpressionUUID->"55bcb16d-c93c-4369-acd8-40454524dfb4"],
+Cell[155252, 3270, 171, 3, 33, "Output",ExpressionUUID->"3034cb18-7ad2-40e5-87b4-be59157c0749"]
 }, Open  ]],
-Cell[151532, 3195, 449, 8, 34, "Text",ExpressionUUID->"6039fd02-92b4-4b31-aa21-b2f42f7f7f92"],
-Cell[151984, 3205, 474, 9, 34, "Text",ExpressionUUID->"e1fde901-d8c6-43cc-87f9-7ad76adee5a3"],
+Cell[155438, 3276, 468, 8, 34, "Text",ExpressionUUID->"6039fd02-92b4-4b31-aa21-b2f42f7f7f92"],
+Cell[155909, 3286, 474, 9, 34, "Text",ExpressionUUID->"e1fde901-d8c6-43cc-87f9-7ad76adee5a3"],
 Cell[CellGroupData[{
-Cell[152483, 3218, 214, 4, 49, "Subsection",ExpressionUUID->"2721ab4f-3bc2-4ed2-bd80-6f5ee8dfc154"],
-Cell[152700, 3224, 475, 9, 31, "CodeText",ExpressionUUID->"7a9ac988-03a4-4c18-9dca-ea7cdc6e168b"],
+Cell[156408, 3299, 214, 4, 49, "Subsection",ExpressionUUID->"2721ab4f-3bc2-4ed2-bd80-6f5ee8dfc154"],
+Cell[156625, 3305, 475, 9, 31, "CodeText",ExpressionUUID->"7a9ac988-03a4-4c18-9dca-ea7cdc6e168b"],
 Cell[CellGroupData[{
-Cell[153200, 3237, 1125, 28, 53, "Input",ExpressionUUID->"e3998e4d-7b72-4f12-ab60-8520725af581"],
-Cell[154328, 3267, 13779, 355, 204, "Output",ExpressionUUID->"3adbf6d4-e47e-42bd-8748-d9a64b073b8e"]
+Cell[157125, 3318, 1125, 28, 53, "Input",ExpressionUUID->"e3998e4d-7b72-4f12-ab60-8520725af581"],
+Cell[158253, 3348, 13775, 355, 204, "Output",ExpressionUUID->"3adbf6d4-e47e-42bd-8748-d9a64b073b8e"]
 }, Open  ]],
-Cell[168122, 3625, 417, 10, 34, "Text",ExpressionUUID->"7527b568-23c5-4ad9-b243-f247ec676b5f"],
-Cell[168542, 3637, 364, 5, 31, "CodeText",ExpressionUUID->"85e0de1b-cdbb-4be7-8eb6-2f8bf4e1b143"],
+Cell[172043, 3706, 553, 12, 34, "Text",ExpressionUUID->"7527b568-23c5-4ad9-b243-f247ec676b5f"],
+Cell[172599, 3720, 450, 6, 31, "CodeText",ExpressionUUID->"85e0de1b-cdbb-4be7-8eb6-2f8bf4e1b143"],
 Cell[CellGroupData[{
-Cell[168931, 3646, 642, 14, 31, "Input",ExpressionUUID->"47d5a103-1ee0-474f-bdd5-da08b5645ac4"],
-Cell[169576, 3662, 603, 14, 33, "Output",ExpressionUUID->"06b3b7a2-57e5-46c0-9b77-bf34e21fd5a0"]
+Cell[173074, 3730, 642, 14, 31, "Input",ExpressionUUID->"47d5a103-1ee0-474f-bdd5-da08b5645ac4"],
+Cell[173719, 3746, 603, 14, 33, "Output",ExpressionUUID->"06b3b7a2-57e5-46c0-9b77-bf34e21fd5a0"]
 }, Open  ]],
-Cell[170194, 3679, 269, 4, 31, "CodeText",ExpressionUUID->"ffb0d36f-db08-4182-b6ba-4d305394dacc"],
+Cell[174337, 3763, 269, 4, 31, "CodeText",ExpressionUUID->"ffb0d36f-db08-4182-b6ba-4d305394dacc"],
 Cell[CellGroupData[{
-Cell[170488, 3687, 1863, 43, 210, "Code",ExpressionUUID->"33396d74-a4ec-44de-9333-fea9daba9032"],
-Cell[172354, 3732, 32436, 663, 204, "Output",ExpressionUUID->"4d4b31be-a417-4d92-83c3-de48d3a25138"]
+Cell[174631, 3771, 1863, 43, 210, "Code",ExpressionUUID->"33396d74-a4ec-44de-9333-fea9daba9032"],
+Cell[176497, 3816, 32432, 663, 204, "Output",ExpressionUUID->"4d4b31be-a417-4d92-83c3-de48d3a25138"]
 }, {2}]],
-Cell[204802, 4398, 386, 8, 34, "Text",ExpressionUUID->"29842694-df31-43e1-a889-5ce4a5949861"],
-Cell[205191, 4408, 491, 9, 34, "Text",ExpressionUUID->"a39e1100-daef-48da-a6da-15dfc6d80b11"],
+Cell[208941, 4482, 437, 8, 34, "Text",ExpressionUUID->"29842694-df31-43e1-a889-5ce4a5949861"],
+Cell[209381, 4492, 542, 9, 34, "Text",ExpressionUUID->"a39e1100-daef-48da-a6da-15dfc6d80b11"],
 Cell[CellGroupData[{
-Cell[205707, 4421, 274, 7, 31, "Input",ExpressionUUID->"c3768418-df7a-4bba-aadb-32ac50275938"],
-Cell[205984, 4430, 172, 3, 33, "Output",ExpressionUUID->"7703ece3-2092-457c-b597-5e69bf8437b9"]
+Cell[209948, 4505, 274, 7, 31, "Input",ExpressionUUID->"c3768418-df7a-4bba-aadb-32ac50275938"],
+Cell[210225, 4514, 172, 3, 33, "Output",ExpressionUUID->"7703ece3-2092-457c-b597-5e69bf8437b9"]
 }, Open  ]],
-Cell[206171, 4436, 774, 13, 57, "Text",ExpressionUUID->"9d9d9923-b8f6-400d-beb6-e26911b8d436"]
+Cell[210412, 4520, 718, 12, 34, "Text",ExpressionUUID->"9d9d9923-b8f6-400d-beb6-e26911b8d436"],
+Cell[211133, 4534, 642, 11, 34, "Text",ExpressionUUID->"408e2271-f099-43b3-93e2-ecaddc7b4034"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[206994, 4455, 353, 6, 72, "Section",ExpressionUUID->"363992ed-65d6-4a46-9388-9c42d41918e4"],
-Cell[207350, 4463, 259, 6, 34, "Text",ExpressionUUID->"c542cc95-bd7a-4055-8d12-8d8d0b34a362"],
-Cell[207612, 4471, 343, 7, 31, "CodeText",ExpressionUUID->"eb319da0-3e09-4b08-8512-aa63ea71b4c9"],
+Cell[211824, 4551, 403, 7, 72, "Section",ExpressionUUID->"363992ed-65d6-4a46-9388-9c42d41918e4"],
+Cell[212230, 4560, 313, 7, 34, "Text",ExpressionUUID->"c542cc95-bd7a-4055-8d12-8d8d0b34a362"],
+Cell[212546, 4569, 343, 7, 31, "CodeText",ExpressionUUID->"eb319da0-3e09-4b08-8512-aa63ea71b4c9"],
 Cell[CellGroupData[{
-Cell[207980, 4482, 829, 24, 53, "Input",ExpressionUUID->"80c464ee-f49f-4b2c-805f-1e02fd230093"],
-Cell[208812, 4508, 127503, 2111, 192, "Output",ExpressionUUID->"8bd682a6-5165-4ff7-89b6-dd7ae7c8e3d3"]
+Cell[212914, 4580, 829, 24, 53, "Input",ExpressionUUID->"80c464ee-f49f-4b2c-805f-1e02fd230093"],
+Cell[213746, 4606, 127503, 2111, 192, "Output",ExpressionUUID->"8bd682a6-5165-4ff7-89b6-dd7ae7c8e3d3"]
 }, Open  ]],
-Cell[336330, 6622, 463, 8, 57, "Text",ExpressionUUID->"7f48dcb3-4cbd-429e-b33d-6940676aa4c3"],
-Cell[336796, 6632, 246, 6, 34, "Text",ExpressionUUID->"4a19826a-020a-4ec3-86eb-a0369192e678"],
-Cell[337045, 6640, 290, 6, 31, "CodeText",ExpressionUUID->"0f5a777d-0135-4d9a-a498-66313be64cd5"],
+Cell[341264, 6720, 568, 10, 57, "Text",ExpressionUUID->"7f48dcb3-4cbd-429e-b33d-6940676aa4c3"],
+Cell[341835, 6732, 246, 6, 34, "Text",ExpressionUUID->"4a19826a-020a-4ec3-86eb-a0369192e678"],
+Cell[342084, 6740, 290, 6, 31, "CodeText",ExpressionUUID->"0f5a777d-0135-4d9a-a498-66313be64cd5"],
 Cell[CellGroupData[{
-Cell[337360, 6650, 883, 22, 53, "Input",ExpressionUUID->"cb53f785-b771-46d6-8596-e35a2ef6b7b5"],
-Cell[338246, 6674, 8453, 220, 121, "Output",ExpressionUUID->"43c01d33-8957-454b-910f-14c3b02dbcd0"]
+Cell[342399, 6750, 883, 22, 53, "Input",ExpressionUUID->"cb53f785-b771-46d6-8596-e35a2ef6b7b5"],
+Cell[343285, 6774, 8453, 220, 121, "Output",ExpressionUUID->"43c01d33-8957-454b-910f-14c3b02dbcd0"]
 }, Open  ]],
-Cell[346714, 6897, 182, 3, 31, "CodeText",ExpressionUUID->"af1cd545-95a4-4d1b-bb0c-695f6855c5e8"],
+Cell[351753, 6997, 182, 3, 31, "CodeText",ExpressionUUID->"af1cd545-95a4-4d1b-bb0c-695f6855c5e8"],
 Cell[CellGroupData[{
-Cell[346921, 6904, 2967, 76, 186, "Code",ExpressionUUID->"ba634719-6cbe-4db2-bf13-f6ce94285b91"],
-Cell[349891, 6982, 640288, 10509, 294, 585714, 9614, "CachedBoxData", "BoxData", "Output",ExpressionUUID->"4f512dd6-c994-4515-b9fd-6a073949aaa0"]
+Cell[351960, 7004, 2967, 76, 186, "Code",ExpressionUUID->"ba634719-6cbe-4db2-bf13-f6ce94285b91"],
+Cell[354930, 7082, 640288, 10509, 294, 585714, 9614, "CachedBoxData", "BoxData", "Output",ExpressionUUID->"4f512dd6-c994-4515-b9fd-6a073949aaa0"]
 }, {2}]],
-Cell[990191, 17494, 408, 8, 57, "Text",ExpressionUUID->"683f24cb-7940-4974-8263-393ab4071470"],
-Cell[990602, 17504, 263, 8, 31, "CodeText",ExpressionUUID->"028bd3b2-0423-476e-a654-d287e30485e1"],
+Cell[995230, 17594, 680, 11, 57, "Text",ExpressionUUID->"683f24cb-7940-4974-8263-393ab4071470"],
+Cell[995913, 17607, 275, 8, 31, "CodeText",ExpressionUUID->"028bd3b2-0423-476e-a654-d287e30485e1"],
 Cell[CellGroupData[{
-Cell[990890, 17516, 1699, 44, 142, "Code",ExpressionUUID->"0f5e9e87-291a-445a-a84c-b4c84f81326b"],
-Cell[992592, 17562, 222638, 3475, 526, "Output",ExpressionUUID->"9cafbab3-ccae-439c-9dd7-53326df6e0a7"]
+Cell[996213, 17619, 1699, 44, 142, "Code",ExpressionUUID->"0f5e9e87-291a-445a-a84c-b4c84f81326b"],
+Cell[997915, 17665, 222677, 3475, 548, "Output",ExpressionUUID->"9cafbab3-ccae-439c-9dd7-53326df6e0a7"]
 }, {2}]],
-Cell[1215242, 21040, 154, 3, 29, "Input",ExpressionUUID->"12c380e8-61e4-426c-97b0-c97effcd9c70"],
-Cell[1215399, 21045, 352, 7, 34, "Text",ExpressionUUID->"f48beef4-2942-45f6-aac5-65a4de312237"]
+Cell[1220604, 21143, 154, 3, 29, "Input",ExpressionUUID->"12c380e8-61e4-426c-97b0-c97effcd9c70"],
+Cell[1220761, 21148, 452, 8, 57, "Text",ExpressionUUID->"f48beef4-2942-45f6-aac5-65a4de312237"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1215788, 21057, 262, 4, 72, "Section",ExpressionUUID->"9da19663-7179-45c9-8160-ad35832309c2"],
-Cell[1216053, 21063, 576, 10, 34, "Text",ExpressionUUID->"974d1d02-3f81-4f9f-a141-4f1608fd9d6a"]
+Cell[1221250, 21161, 313, 5, 72, "Section",ExpressionUUID->"9da19663-7179-45c9-8160-ad35832309c2"],
+Cell[1221566, 21168, 576, 10, 34, "Text",ExpressionUUID->"974d1d02-3f81-4f9f-a141-4f1608fd9d6a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1216666, 21078, 171, 3, 72, "Section",ExpressionUUID->"a78f6e4f-dbdf-4763-a44f-16569b36e665"],
-Cell[1216840, 21083, 213, 4, 34, "Text",ExpressionUUID->"a4e585e2-fad1-40ff-85de-7b4c754eae54"],
-Cell[1217056, 21089, 175, 3, 49, "Subsection",ExpressionUUID->"962879f3-9b11-4b56-8992-fa4001376df9"],
-Cell[1217234, 21094, 224, 4, 41, "Subsection",ExpressionUUID->"f46ef323-e1f9-43b8-b626-fa17b9c9a91b"],
-Cell[1217461, 21100, 224, 4, 41, "Subsection",ExpressionUUID->"d6c5abda-8183-41cc-9f3d-132ba5a38cb4"],
-Cell[1217688, 21106, 222, 4, 41, "Subsection",ExpressionUUID->"f9a42e24-3257-4b35-8468-5b9b14030d1c"]
+Cell[1222179, 21183, 220, 4, 72, "Section",ExpressionUUID->"a78f6e4f-dbdf-4763-a44f-16569b36e665"],
+Cell[1222402, 21189, 213, 4, 34, "Text",ExpressionUUID->"a4e585e2-fad1-40ff-85de-7b4c754eae54"],
+Cell[1222618, 21195, 175, 3, 49, "Subsection",ExpressionUUID->"962879f3-9b11-4b56-8992-fa4001376df9"],
+Cell[1222796, 21200, 224, 4, 41, "Subsection",ExpressionUUID->"f46ef323-e1f9-43b8-b626-fa17b9c9a91b"],
+Cell[1223023, 21206, 224, 4, 41, "Subsection",ExpressionUUID->"d6c5abda-8183-41cc-9f3d-132ba5a38cb4"],
+Cell[CellGroupData[{
+Cell[1223272, 21214, 222, 4, 41, "Subsection",ExpressionUUID->"f9a42e24-3257-4b35-8468-5b9b14030d1c"],
+Cell[1223497, 21220, 460, 33, 30, "Reference",ExpressionUUID->"a4ab6141-a94d-4318-9a66-5c42abab96f1",
+ CellTags->"00004B11"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }
