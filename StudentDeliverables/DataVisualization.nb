@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       161,          7]
-NotebookDataLength[     51147,       1252]
+NotebookDataLength[     51184,       1252]
 NotebookOptionsPosition[     48918,       1218]
-NotebookOutlinePosition[     49275,       1234]
-CellTagsIndexPosition[     49232,       1231]
+NotebookOutlinePosition[     49312,       1234]
+CellTagsIndexPosition[     49269,       1231]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1218,7 +1218,7 @@ Cell[BoxData[
 },
 WindowSize->{1323, 744},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
-WindowStatusArea->None,
+WindowStatusArea->"Prefetching related knowledgebase data.",
 FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 7, 2018)",
 StyleDefinitions->"Default.nb"
 ]
