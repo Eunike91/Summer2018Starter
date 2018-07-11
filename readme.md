@@ -22,6 +22,7 @@ https://datarepository.wolframcloud.com/
 As mentioned above the function was primarily written for data objects of the Wolfram Data Repository. When applying the function to data it should give you an nice overview and hopefully helps to reduce time to understand the underlying data, to find relationships, and to get the information searched. 
 
 ## Load the package 
-A package was created to easily access the function and getting use of its functionality
+A package was created to easily access the function and getting use of its functionality.
 
-TODO
+Load it: Needs[autoWiz`] and make sure that the package is in the same directory as your notebook (type SetDirectory[NotebookDirectory[]])
+use it by call MainFunction[ResourceObject["xx"], int] where xx refers to a data object of the Wolfram Data Repository and int is the sample size (if you are not putting something inside here 10 is set as default variable).
