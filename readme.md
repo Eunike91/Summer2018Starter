@@ -1,57 +1,27 @@
-# https://wolfr.am/wss2018github
+#Automatic Data Visualization
 
-This is a sample student repository for the Wolfram Summer School 2018. You can clone or fork this repository to get started
-
-Thing to do to get started with GIT:
-
-## Create a GitHub account
-https://github.com/join
-
-## Create a new repo
-you can either create a new repo or fork this one
-
-## Give your instructor write permissions
-you need to give write permission to that repo to your tutor and to @WolframSummerSchoolProjects. Additionally please give write permissions to @abritac and @swedewhite for organizational purposes (you can revoke these at the end of school).
+The goal of the project was to design heuristic rules to automatically visualize various types of data. It combines statistical analysis, unsupervised/clustering methods along with the wide variety of visualization techniques Wolfram Language has to offer.
 
 
-## Download and install a Git UI
-*On OSX / Wndows*:  
-Download and install github desktop:  
-https://desktop.github.com  
+## Summary
+'A picture is worth a thousand words' - While trying to obtain information from large volumes of data, it is useful to visualize it in a meaningful way. However, the greatest challenge is to find the appropriate tool to visualize the underlying data. In this project, we have explored the various kinds of data visualization tools the Wolfram Language offers, and have come up with automatic rules to infer the data type and decide automatically the exact plot type to use for the data.  As the Wolfram Data Repository offers a large amount of curated data, we used examples from there. 
 
-*On Ubuntu*:  
-Download and install git kraken:  
-https://www.gitkraken.com  
-Login and authenticate with GitHub  
-https://support.gitkraken.com/integrations/github
+## Future Work
+As large volumes of data imply a high number of visualization methods, there are way more informative visualization techniques that can be explored further. 
 
-## Install command line utility (optional)
-https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+## Useful links
+https://datarepository.wolframcloud.com/
 
-## Clone the repo locally
-by clicking on the button CLONE OR DOWNLOAD and then to OPEN IN DESKTOP
+## Keys
+*automated visualization* 
+*data analysis*
+*wolfram data repository*
 
-## StudentDeliverables folder
-this contains templates for various notebooks you will be creating and submitting during the course of the school, according to the deadlines mentioned in the syllabus.
 
-## Write a readme using MarkDown
-a nice cheatsheet can be found here: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-the readme should contain: 
-1. what your project is about
-2. how to run your code
-3. examples, code documentation, etc
+## Function Usage
+As mentioned above the function was primarily written for data objects of the Wolfram Data Repository. When applying the function to data it should give you an nice overview and hopefully helps to reduce time to understand the underlying data, to find relationships, and to get the information searched. 
 
-## Organize your code
-in this repository you will find 2 different ways to organize your code, the simple way and the programmer way.
+## Load the package 
+A package was created to easily access the function and getting use of its functionality
 
-### The simple way
-you split your logic into functions that you need for your projects and notebooks that you use to visualize data and show final results.
-1. the code is in `starthere/simple.m`
-2. the notebook used for visualization is in `starthere/simple.nb`
-
-### The programmer way
-I prepared a very simple project paclet you can use, it provides a way to organize your code and your data
-
-1. the code is in paclet in `starthere/Project` folder
-2. raw source data can be put in `starthere/Project/Assets/` folder
-3. the notebook used for visualization is in `starthere/advanced.nb`
+TODO
