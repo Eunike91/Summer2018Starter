@@ -92,7 +92,7 @@ Lab="Dependence of " <> ToString[l0[[pS[[i]]]][[2]][[2]]]<>" and "<>ToString[l0[
 If[
 pValue<0.05,
 ListPlot[Transpose[{Normalize[v1],Normalize[v2]}],PlotLegends->Automatic,PlotStyle->Directive[PointSize[Medium],RandomChoice[{Pink,Purple,Black,Green}]],AxesLabel->{l0[[pS[[i]]]][[1]][[2]],l0[[pS[[i]]]][[2]][[2]]},PlotTheme->"Monochrome"],
-StackedListPlot[{Normalize[v2],Normalize[v1]},AxesLabel->{l0[[pS[[i]]]][[1]][[2]],l0[[pS[[i]]]][[2]][[2]]},PlotStyle->PointSize[Medium]]]],
+StackedListPlot[MapThread[Labeled[#1,#2]&,{{Normalize[v2],Normalize[v1]},{l0[[pS[[i]]]][[1]][[2]],l0[[pS[[i]]]][[2]][[2]]}}],PlotStyle->PointSize[Medium]]]],
 {i,1,Length[pS]}
 ],
 True,
@@ -146,7 +146,7 @@ suggestedTypes[finalD,10]
 ],{i,1,Length[pE]}]
 ] 
 
-MainFunction[d0_,intP_:10,nomP_:"H",numP_:"H",intN_:10,intI_:10,intE_:10,intT_:10]:=Module[{posT,pE,d,entTab,PlotNom,PlotText,PlotNumeric,PlotImage,PlotTime,PlotAudio,PlotGeo,PlotNomE=Sequence[],PlotTextE=Sequence[],PlotNumericE=Sequence[],PlotImageE=Sequence[],PlotTimeE=Sequence[],PlotAudioE=Sequence[],PlotGeoE=Sequence[],return}, (*put in dataobject, may adjust*)
+MainFunction[d0_,intP_:10,nomP_:"H",numP_:"H",intN_:10,intI_:10,intE_:10,intT_:10,EntBool_:False]:=Module[{posT,pE,d,entTab,PlotNom,PlotText,PlotNumeric,PlotImage,PlotTime,PlotAudio,PlotGeo,PlotNomE=Sequence[],PlotTextE=Sequence[],PlotNumericE=Sequence[],PlotImageE=Sequence[],PlotTimeE=Sequence[],PlotAudioE=Sequence[],PlotGeoE=Sequence[],return}, (*put in dataobject, may adjust*)
 Which[
 d0["ContentTypes"]=={"Entity Store"},Nothing,
 d0["ContentTypes"]=={"Text"},
@@ -163,7 +163,7 @@ PlotImage=imagePlot[posT,intI];
 PlotGeo=geoPlot[posT];
 PlotTime=timeSeriesPlot[posT,intT];
 PlotAudio=audioPlot[posT]; (*maybe here too just to be sure*)
-If[MemberQ[posT[[All,1]],"Entity"],
+If[(MemberQ[posT[[All,1]],"Entity" ]&& EntBool),
 pE=DeleteCases[#,_Missing]&/@Pick[posT[[All,3]],StringMatchQ[posT[[All,1]],"Entity"]];
 entTab=getEntTable[pE,intE];(*may add treshhold here for missings*)
 Table[
